@@ -1,8 +1,12 @@
 let input="";
-let text = document.getElementById("nameText").addEventListener("input", function(){
-    input =document.getElementById("nameText").value;
+document.getElementById("nameText").addEventListener("input", function(){
+  input =document.getElementById("nameText").value;
 })
 
 const btn = document.getElementById("clickBtn").addEventListener("click", function() {
-  alert(input + "さんこんにちは！");
+  if(input.trim() === ""){
+    alert("名前を入力してください。");
+  }else{
+    alert(input + "さんこんにちは！");
+  }
 });
